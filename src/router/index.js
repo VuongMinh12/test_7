@@ -3,8 +3,9 @@ import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
 import AboutView from "../views/AboutView.vue";
 import TestView from "../views/TestView.vue";
-import Test from "../views/Test.vue";
+import User from "../views/User.vue";
 import ErrorView from "../views/ErrorView.vue";
+import UserDetail from "../views/UserDetail.vue";
 
 const routes = [
   {
@@ -23,13 +24,17 @@ const routes = [
     component: TestView,
   },
   {
-    path: "/test",
-    name: "test",
-    component: Test,
+    path: "/user",
+    name: "user",
+    component: User,
   },
   {
     path: "/:pathMatch(.*)*",
     component: ErrorView,
+  },
+  {
+    path: "/userdetail/:id",
+    component: UserDetail,
   },
 ];
 

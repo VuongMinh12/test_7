@@ -2,11 +2,12 @@
 <template>
   <b-table>
     <tr>
-      <td>Id</td>
+      <td>ID</td>
       <td>Age</td>
       <td>FirstName</td>
       <td>LastName</td>
-      <td>Show data</td>
+      <td>Show data with modal</td>
+      <td>Show data with router-link</td>
       <td>Edit data</td>
       <td>Delete data</td>
     </tr>
@@ -24,6 +25,11 @@
           @click="showDetails(item)"
         >
           Show User
+        </button>
+      </td>
+      <td>
+        <button>
+          <router-link :to="`/userdetail/${item.id}`"> Show</router-link>
         </button>
       </td>
       <td>
@@ -218,5 +224,24 @@ td {
 }
 template {
   margin: 1%;
+}
+a:link {
+  text-decoration: none;
+  color: black;
+}
+
+a:visited {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  text-decoration: none;
+  color: black;
+}
+
+a:active {
+  text-decoration: none;
+  color: black;
 }
 </style>
